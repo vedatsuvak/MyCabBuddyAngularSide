@@ -20,7 +20,7 @@ import {MatMenuModule} from "@angular/material/menu";
     NavbarComponent,
     HomeComponent,
     AboutComponent,
-    ContactComponent
+    ContactComponent,
   ],
   imports: [
     BrowserModule,
