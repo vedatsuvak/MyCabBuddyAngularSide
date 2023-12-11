@@ -1,1 +1,36 @@
-/* You can add global styles to this file, and also import other style files */
+#app {
+  font-family: 'Arial', sans-serif;
+  text-align: center;
+}
+
+nav {
+  background-color: #78fc78;
+  padding: 1rem;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+  margin-right: 1rem;
+  font-size: 1.2rem;
+}
+
+.content {
+  padding: 2rem;
+  color: black;
+}
+
+.router-link-active {
+  font-weight: bold;
+}
+
+.mat-toolbar button.mat-icon-button {
+  color: #0c0c33;
+  background-color: #a44190;
+}
+
+
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; color: bisque; background: linear-gradient(to top right, #cc4040, #b23678)}
+
+
