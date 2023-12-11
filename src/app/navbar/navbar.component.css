@@ -1,0 +1,30 @@
+nav {
+  background: none;
+  padding: 1rem;
+}
+
+button {
+  color: white;
+  background: transparent;
+  border: none;
+  font-size: 1.5rem;
+  cursor: pointer;
+  margin-right: 1rem; /* Add margin for spacing between the button and links */
+}
+
+a {
+  color: white;
+  text-decoration: none;
+  font-size: 1.2rem;
+  margin-right: 1rem; /* Add margin for spacing between links */
+}
+
+.sidebar-container {
+  display: flex;
+  align-items: center;
+  width: 100vw; /* Set the width to 100% of the viewport width */
+}
+
+.router-link-active {
+  font-weight: bold;
+}

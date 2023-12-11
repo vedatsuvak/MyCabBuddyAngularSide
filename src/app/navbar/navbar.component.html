@@ -1,0 +1,18 @@
+<nav>
+  <div class="navbar-links">
+    <a routerLink="/">Home</a>
+
+    <button [matMenuTriggerFor]="menu">
+      <span>Contact</span>
+    </button>
+
+    <mat-menu #menu="matMenu" xPosition="after" yPosition="below">
+      <button mat-menu-item routerLink="/contact">Contact 1</button>
+      <button mat-menu-item routerLink="/contact">Contact 2</button>
+      <button mat-menu-item routerLink="/contact">Contact 3</button>
+      <!-- Add more menu items as needed -->
+    </mat-menu>
+
+    <a routerLink="/about">About</a>
+  </div>
+</nav>
