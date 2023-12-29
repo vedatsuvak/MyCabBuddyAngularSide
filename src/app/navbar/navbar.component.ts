@@ -1,16 +1,34 @@
-import { Component, EventEmitter, Output } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
+import { SessionService } from '../session-service.service';
+import { Router } from "@angular/router";
 
 @Component({
   selector: 'app-navbar',
   templateUrl: './navbar.component.html',
   styleUrls: ['./navbar.component.css']
 })
-export class NavbarComponent {
-  @Output() toggleSidenav = new EventEmitter<void>();
+export class NavbarComponent implements OnInit {
+  username: any;
 
-  toggleSidenavClick() {
-    this.toggleSidenav.emit();
+  constructor(
+    private router: Router,
+    private sessionService: SessionService
+  ) {}
+
+  ngOnInit(): void {
+    const session = this.sessionService.getSession();
+    this.username = session ? session.username : null;
   }
 
-  protected readonly menubar = menubar;
+  isLoggedIn(): boolean {
+    return this.sessionService.getSession() !== null;
+  }
+
+  logout(): void {
+    const isConfirmed = window.confirm('Are you sure you want to log out?');
+    if (isConfirmed) {
+      this.sessionService.clearSession();
+      this.router.navigate(['/login']);
+    }
+  }
 }

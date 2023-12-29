@@ -4,33 +4,40 @@
 }
 
 nav {
-  background-color: #78fc78;
-  padding: 1rem;
+  background-color: #4CAF50;
+  padding: 10px;
 }
 
 nav a {
   color: white;
   text-decoration: none;
-  margin-right: 1rem;
+  margin: 0 1rem;
   font-size: 1.2rem;
 }
 
 .content {
-  padding: 2rem;
-  color: black;
+  padding: 5rem;
 }
 
 .router-link-active {
   font-weight: bold;
 }
 
-.mat-toolbar button.mat-icon-button {
-  color: #0c0c33;
-  background-color: #a44190;
+body {
+  background-size: cover;
+  background-position: center;
+  background-repeat: repeat;
+  background-position-y: unset ;
+  margin-top: 0;
+  padding: 0; /* Remove default padding for the body */
 }
 
+/* Background for not-logged-in state */
+body:not(.logged-in) {
+  background-image: url('assets/photos/backgroundnotloggedin.jpg');
+}
 
-html, body { height: 100%; }
-body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; color: bisque; background: linear-gradient(to top right, #cc4040, #b23678)}
-
-
+/* Background for logged-in state */
+body.logged-in {
+  background-image: url('assets/photos/backgroundloggedin.jpg');
+}

@@ -1,25 +1,6 @@
 <div id="app">
-  <mat-toolbar color="primary">
-    <button mat-icon-button class="custom-icon-button" (click)="sidenav.toggle()">
-      <mat-icon>menu</mat-icon>
-    </button>
-    <span>My Cab Buddy</span>
-    <app-navbar></app-navbar>
-  </mat-toolbar>
-
-  <mat-sidenav-container>
-    <mat-sidenav #sidenav mode="push">
-      <ul>
-        <li><a routerLink="/">Home</a></li>
-        <li><a routerLink="/contact">Contact</a></li>
-        <li><a routerLink="/about">About</a></li>
-      </ul>
-    </mat-sidenav>
-
-    <mat-sidenav-content>
-      <div class="content">
-        <router-outlet></router-outlet>
-      </div>
-    </mat-sidenav-content>
-  </mat-sidenav-container>
+  <app-navbar></app-navbar>
+  <div class="content">
+    <router-outlet></router-outlet>
+  </div>
 </div>

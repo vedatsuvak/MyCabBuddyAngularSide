@@ -1,30 +1,35 @@
-nav {
-  background: none;
-  padding: 1rem;
-}
-
-button {
-  color: white;
-  background: transparent;
-  border: none;
-  font-size: 1.5rem;
-  cursor: pointer;
-  margin-right: 1rem; /* Add margin for spacing between the button and links */
-}
-
-a {
-  color: white;
-  text-decoration: none;
-  font-size: 1.2rem;
-  margin-right: 1rem; /* Add margin for spacing between links */
-}
-
-.sidebar-container {
+/* navbar.component.scss */
+#navbar {
   display: flex;
-  align-items: center;
-  width: 100vw; /* Set the width to 100% of the viewport width */
 }
 
-.router-link-active {
-  font-weight: bold;
+#menuToggle {
+  display: none;
+}
+
+#menuIcon {
+  font-size: 24px;
+  cursor: pointer;
+  margin-left: 20px;
+}
+
+#sideMenu {
+  width: 250px;
+  height: 100vh;
+  background-color: #333;
+  color: white;
+  position: fixed;
+  left: -250px;
+  transition: left 0.3s ease;
+}
+
+#sideMenu a {
+  display: block;
+  padding: 15px;
+  text-decoration: none;
+  color: white;
+}
+
+.open {
+  left: 0;
 }
