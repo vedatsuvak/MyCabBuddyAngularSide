@@ -12,7 +12,8 @@ export class UserRegistrationServiceService {
     const httpOptions = {
       headers: new HttpHeaders({
         'Content-Type': 'application/json'
-      })
+      }),
+      responseType: 'text' as 'json',
     };
     return this.http.post<any>("http://localhost:8085/register", user, httpOptions)
       .pipe(

@@ -2,7 +2,6 @@
 
 <div id="app">
   <nav>
-    <!-- Display these links when the user is not logged in -->
     <ng-container *ngIf="!isLoggedIn()">
       <a routerLink="/">Home</a>
       <a routerLink="/login">Login</a>
@@ -11,7 +10,6 @@
       <a routerLink="/contact">Contact</a>
     </ng-container>
 
-    <!-- Display these links when the user is logged in -->
     <ng-container *ngIf="isLoggedIn()">
       <a routerLink="/home">Home</a>
       <a routerLink="/dashboard">Dashboard</a>

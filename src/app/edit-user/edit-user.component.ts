@@ -25,7 +25,7 @@ export class EditUserComponent implements OnInit {
       username: [this.users.username, [Validators.required, Validators.pattern('^[A-Za-z0-9_-]{5,30}$')]],
       fullname: [this.users.fullname, [Validators.required, Validators.pattern('^[A-Za-z ]{5,30}$')]],
       email: [this.users.email, [Validators.required, Validators.pattern('^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\\.[a-zA-Z]{2,}$')]],
-      phone: [this.users.phone, [Validators.required, Validators.pattern('^[+0-9]{5,30}$')]],
+      phone: [this.users.phone, [Validators.required, Validators.pattern( "^\\+(?:[0-9] ?){6,14}[0-9]$")]],
       password: ['', [Validators.required, Validators.pattern('^(?=.*[a-z])(?=.*[A-Z])(?=.*\\d)(?=.*[@$!%*.?&])[A-Za-z\\d@$!%*.?&]{8,}$')]],    });
 
   }
@@ -55,7 +55,7 @@ export class EditUserComponent implements OnInit {
       username: [this.users.username, [Validators.required, Validators.pattern('^[A-Za-z0-9_-]{5,30}$')]],
       fullname: [this.users.fullname, [Validators.required, Validators.pattern('^[A-Za-z ]{5,30}$')]],
       email: [this.users.email, [Validators.required, Validators.pattern('^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\\.[a-zA-Z]{2,}$')]],
-      phone: [this.users.phone, [Validators.required, Validators.pattern('^[+0-9]{5,30}$')]],
+      phone: [this.users.phone, [Validators.required, Validators.pattern( "^\\+(?:[0-9] ?){6,14}[0-9]$")]],
       password: ['', [Validators.required, Validators.pattern('^(?=.*[a-z])(?=.*[A-Z])(?=.*\\d)(?=.*[@$!%*.?&])[A-Za-z\\d@$!%*.?&]{8,}$')]],
     });
   }

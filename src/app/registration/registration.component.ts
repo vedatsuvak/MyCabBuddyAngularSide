@@ -34,7 +34,7 @@ export class RegistrationComponent implements OnInit {
       username: ['', [Validators.required, Validators.pattern('^[A-Za-z0-9_-]{5,30}$')]],
       fullname: ['', [Validators.required, Validators.pattern('^[A-Za-z ]{5,30}$')]],
       email: ['', [Validators.required, Validators.pattern('^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\\.[a-zA-Z]{2,}$')]],
-      phone: [''],
+      phone: ['', [Validators.required, Validators.pattern( "^\\+(?:[0-9] ?){6,14}[0-9]$")]],
       password: ['', [Validators.required, Validators.pattern('^(?=.*[a-z])(?=.*[A-Z])(?=.*\\d)(?=.*[@$!%*.?&])[A-Za-z\\d@$!%*.?&]{8,}$')]],
       conpassword: ['', [Validators.required, Validators.pattern('^(?=.*[a-z])(?=.*[A-Z])(?=.*\\d)(?=.*[@$!%*.?&])[A-Za-z\\d@$!%*.?&]{8,}$')]],
     });
@@ -46,8 +46,7 @@ export class RegistrationComponent implements OnInit {
         let response = this.service.doregistration(this.user);
         response.subscribe(
           (data: any) => {
-            this.response = data;
-            this.message = "Hey " + this.user.username + ", you are registered successfully!";
+            this.message = data;
             //this.router.navigate(['/login']);
           },
           (error: any) => {
